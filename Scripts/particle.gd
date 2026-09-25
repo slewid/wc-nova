@@ -17,7 +17,7 @@ var particle_elements: Dictionary[GameElements, ParticleElement]
 func _ready() -> void:
 	size = randf_range(0, 1)
 	density = randf_range(0, 1)
-	omni_range = randf_range(1, 4096)
+	omni_range = randf_range(1, 1)
 
 	gen_elements()
 	gen_colour()

@@ -1,20 +1,9 @@
 [gd_scene format=3 uid="uid://c4tc0chhnrdsh"]
 
 [ext_resource type="Script" uid="uid://cv6v3jli64n17" path="res://Scripts/world.gd" id="1_5cjrv"]
+[ext_resource type="Environment" uid="uid://c1apg073hpjxw" path="res://Scenes/environment.tres" id="2_gjpho"]
 [ext_resource type="Script" uid="uid://b4pcgr8dthd0o" path="res://Scripts/particle_manager.gd" id="2_j0p05"]
 [ext_resource type="PackedScene" uid="uid://c02cu2hvsds58" path="res://Scenes/particle.tscn" id="3_5nsto"]
-
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_3geb6"]
-sky_top_color = Color(0.09019608, 0.10980392, 0.18039216, 1)
-sky_horizon_color = Color(0.35748914, 0.27601078, 0.17453942, 1)
-sky_curve = 0.07764489
-
-[sub_resource type="Sky" id="Sky_auvuk"]
-sky_material = SubResource("ProceduralSkyMaterial_3geb6")
-
-[sub_resource type="Environment" id="Environment_vmusf"]
-background_mode = 2
-sky = SubResource("Sky_auvuk")
 
 [node name="World" type="Node3D" unique_id=1314160547 node_paths=PackedStringArray("environment", "particle_manager")]
 script = ExtResource("1_5cjrv")
@@ -22,10 +11,17 @@ environment = NodePath("WorldEnvironment")
 particle_manager = NodePath("ParticleManager")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1394004437]
-environment = SubResource("Environment_vmusf")
+environment = ExtResource("2_gjpho")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=597947888]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
 
 [node name="ParticleManager" type="Node3D" parent="." unique_id=254565046]
 script = ExtResource("2_j0p05")
 metadata/_custom_type_script = "uid://b4pcgr8dthd0o"
 
 [node name="Particle" parent="ParticleManager" unique_id=305431425 instance=ExtResource("3_5nsto")]
+light_color = Color(0.83784103, 0.5617146, 7.70092e-07, 1)
+light_volumetric_fog_energy = 50.0
+light_size = 1.0
+omni_range = 0.201
