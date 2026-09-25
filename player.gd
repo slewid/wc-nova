@@ -8,6 +8,7 @@ extends CharacterBody3D
 @export var mouse_sensitivity= 0.005
 func _input(event):
 	if event is InputEventMouseMotion:
+		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 		print(-event.relative.y)
 		$Camera3D.rotate_x(-event.relative.y * mouse_sensitivity)
 		rotate_y(-event.relative.x * mouse_sensitivity)
