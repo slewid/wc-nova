@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bwuoy0je3f646"]
 
-[ext_resource type="PackedScene" uid="uid://dovl8ljmjting" path="res://player.tscn" id="1_37kl0"]
+[ext_resource type="PackedScene" uid="uid://dovl8ljmjting" path="res://Scenes/player.tscn" id="1_37kl0"]
 
 [node name="Node3D" type="Node3D" unique_id=1296312158]
 
