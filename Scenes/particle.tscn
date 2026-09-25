@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://c02cu2hvsds58"]
+
+[ext_resource type="Script" uid="uid://bobqnquh0gv5x" path="res://Scripts/particle.gd" id="1_xhwoe"]
+
+[node name="Particle" type="OmniLight3D" unique_id=305431425]
+script = ExtResource("1_xhwoe")
+metadata/_custom_type_script = "uid://bobqnquh0gv5x"
