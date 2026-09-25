@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bwuoy0je3f646"]
+
+[ext_resource type="PackedScene" uid="uid://dovl8ljmjting" path="res://player.tscn" id="1_37kl0"]
+
+[node name="Node3D" type="Node3D" unique_id=1296312158]
+
+[node name="CharacterBody3D" parent="." unique_id=334466508 instance=ExtResource("1_37kl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=868830467]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, -0.4995, -5.5)
+use_collision = true
+size = Vector3(12, 0.001, 14)
+
+[node name="AreaLight3D" type="AreaLight3D" parent="." unique_id=1448753570]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 4, -6)
