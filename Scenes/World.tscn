@@ -16,8 +16,7 @@ environment = ExtResource("2_gjpho")
 
 [node name="ParticleManager" type="Node3D" parent="." unique_id=254565046]
 script = ExtResource("2_j0p05")
+particle_scene = ExtResource("3_5nsto")
 metadata/_custom_type_script = "uid://b4pcgr8dthd0o"
-
-[node name="Particle" parent="ParticleManager" unique_id=305431425 instance=ExtResource("3_5nsto")]
 
 [node name="CharacterBody3D" parent="." unique_id=334466508 instance=ExtResource("5_p70al")]
