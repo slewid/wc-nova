@@ -1,4 +1,6 @@
 extends Node
+
+@export var zoom_constant: int = 20
 @export var gravity = 0
 @export var speed = 7000
 @export var sprint_mult = 4
