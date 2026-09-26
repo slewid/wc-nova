@@ -3,7 +3,7 @@ class_name ParticleManager
 
 @export var galaxy_scene: PackedScene
 
-var amount_range: Array[int] = [0, 1000]
+var amount_range: Array[int] = [200, 800]
 var start_range: int = 10000
 var start_distance: int = 2000
 
@@ -11,6 +11,11 @@ func _ready():
 	randomize()
 
 	var funky_range = range(start_range)
+	var funky_range2 = range(0, -start_range, -1)
+
+	for val in funky_range2:
+		funky_range.append(val)
+
 	funky_range = funky_range.filter(func(x): return x > start_distance or x < -start_distance)
 
 	for x in range(randi_range(amount_range[0], amount_range[1])):
