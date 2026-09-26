@@ -13,34 +13,52 @@ var size: float
 var density: float
 var luminosity: float
 var particle_elements: Dictionary[GameElements, ParticleElement]
+var surface_material = null
 
 func _ready() -> void:
-	size = randf_range(0, 1)
+	size = randf_range(0, 20)
 	density = randf_range(0, 1)
-	omni_range = randf_range(1, 1)
+	scale.x = size
+	scale.y = size
+	scale.z = size
+
+	surface_material = mesh.surface_get_material(0)
+	surface_material.emission_energy_multiplier = density
 
 	gen_elements()
 	gen_colour()
 
 func gen_colour():
+	surface_material.emission = Color(0, 0, 0)
+
 	for element in particle_elements.values():
 		if element.element.colour == Colours.R:
-			light_color.r = element.concentration * 255
+			surface_material.emission.r += element.concentration * 255
 
 			continue
 
 		if element.element.colour == Colours.G:
+			surface_material.emission.g += element.concentration * 255
 
-			light_color.g = element.concentration * 255
 			continue
 
 		if element.element.colour == Colours.B:
-			light_color.b = element.concentration * 255
+			surface_material.emission.b += element.concentration * 255
 
 			continue
 
-	print(light_color)
+	print(surface_material.emission)
 
 func gen_elements():
+	var rand_vals = []
+	var s = 0
+
 	for element in range(GameElements.size()):
-		particle_elements[element] = ParticleElement.new(randf_range(0, 1), elements[element])
+		var val = randf_range(0, 1)
+		rand_vals.append([element, val])
+		s += val
+
+	for val in rand_vals:
+		var balenced = val[1]/s
+
+		particle_elements[val[0]] = ParticleElement.new(balenced, elements[val[0]])

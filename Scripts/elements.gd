@@ -1,4 +1,4 @@
-extends OmniLight3D
+extends MeshInstance3D
 class_name Elements
 
 enum Colours {

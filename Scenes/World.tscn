@@ -14,14 +14,10 @@ particle_manager = NodePath("ParticleManager")
 environment = ExtResource("2_gjpho")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=597947888]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.1232972)
 
 [node name="ParticleManager" type="Node3D" parent="." unique_id=254565046]
 script = ExtResource("2_j0p05")
 metadata/_custom_type_script = "uid://b4pcgr8dthd0o"
 
 [node name="Particle" parent="ParticleManager" unique_id=305431425 instance=ExtResource("3_5nsto")]
-light_color = Color(0.83784103, 0.5617146, 7.70092e-07, 1)
-light_volumetric_fog_energy = 50.0
-light_size = 1.0
-omni_range = 0.201

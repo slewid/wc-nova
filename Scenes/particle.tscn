@@ -2,6 +2,16 @@
 
 [ext_resource type="Script" uid="uid://bobqnquh0gv5x" path="res://Scripts/particle.gd" id="1_xhwoe"]
 
-[node name="Particle" type="OmniLight3D" unique_id=305431425]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xhwoe"]
+emission_enabled = true
+emission = Color(0.9152707, 0.5047445, 0.089801796, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_xhwoe"]
+material = SubResource("StandardMaterial3D_xhwoe")
+radius = 0.05
+height = 0.1
+
+[node name="MeshInstance3D" type="MeshInstance3D" unique_id=1618916143]
+cast_shadow = 0
+mesh = SubResource("SphereMesh_xhwoe")
 script = ExtResource("1_xhwoe")
-metadata/_custom_type_script = "uid://bobqnquh0gv5x"
