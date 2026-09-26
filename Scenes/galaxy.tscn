@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cyfdqaccddbj4"]
+
+[ext_resource type="Script" uid="uid://cblqm2xmev5y2" path="res://Scripts/galaxy.gd" id="1_8by1x"]
+[ext_resource type="PackedScene" uid="uid://c02cu2hvsds58" path="res://Scenes/particle.tscn" id="2_jdr8e"]
+
+[node name="Galaxy" type="Node3D" unique_id=720770064]
+script = ExtResource("1_8by1x")
+particle_scene = ExtResource("2_jdr8e")
+metadata/_custom_type_script = "uid://cblqm2xmev5y2"

@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://cv6v3jli64n17" path="res://Scripts/world.gd" id="1_5cjrv"]
 [ext_resource type="Environment" uid="uid://c1apg073hpjxw" path="res://Scenes/environment.tres" id="2_gjpho"]
 [ext_resource type="Script" uid="uid://b4pcgr8dthd0o" path="res://Scripts/particle_manager.gd" id="2_j0p05"]
-[ext_resource type="PackedScene" uid="uid://c02cu2hvsds58" path="res://Scenes/particle.tscn" id="3_5nsto"]
+[ext_resource type="PackedScene" uid="uid://cyfdqaccddbj4" path="res://Scenes/galaxy.tscn" id="4_p70al"]
 [ext_resource type="PackedScene" uid="uid://dovl8ljmjting" path="res://Scenes/player.tscn" id="5_p70al"]
 
 [node name="World" type="Node3D" unique_id=1314160547 node_paths=PackedStringArray("environment", "particle_manager")]
@@ -16,7 +16,7 @@ environment = ExtResource("2_gjpho")
 
 [node name="ParticleManager" type="Node3D" parent="." unique_id=254565046]
 script = ExtResource("2_j0p05")
-particle_scene = ExtResource("3_5nsto")
+galaxy_scene = ExtResource("4_p70al")
 metadata/_custom_type_script = "uid://b4pcgr8dthd0o"
 
 [node name="CharacterBody3D" parent="." unique_id=334466508 instance=ExtResource("5_p70al")]
