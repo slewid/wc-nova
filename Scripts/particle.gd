@@ -15,6 +15,9 @@ var luminosity: float
 var particle_elements: Dictionary[GameElements, ParticleElement]
 var surface_material = null
 
+var density_range = [0.2, 0.7]
+var max_size = 12
+
 func _ready() -> void:
 	randomize()
 
@@ -25,8 +28,8 @@ func _ready() -> void:
 
 		set_surface_override_material(0, unique_mat)
 
-	size = randf_range(0, 20)
-	density = randf_range(0, 1)
+	size = randf_range(0, max_size)
+	density = randf_range(density_range[0], density_range[1])
 	scale.x = size
 	scale.y = size
 	scale.z = size

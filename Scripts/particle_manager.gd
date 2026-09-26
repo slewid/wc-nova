@@ -3,7 +3,7 @@ class_name ParticleManager
 
 @export var particle_scene: PackedScene
 @export var initial_range: int = 4000
-@export var initial_distance: int = 4000
+@export var initial_distance: int = 2000
 
 func _ready():
 	randomize()
