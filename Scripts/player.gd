@@ -18,6 +18,8 @@ func _unhandled_input(event: InputEvent) -> void:
 		elif Input.is_action_just_pressed("zoom-"):
 			camera.attributes.frustum_focal_length -= Globals.zoom_constant
 
+			camera.attributes.frustum_focal_length = max(camera.attributes.frustum_focal_length, 35)
+
 func _physics_process(delta):
 	var horizontal_input : Vector2 = Input.get_vector("left","right","forward","back")
 	var vertical_input : float = Input.get_axis("down","up")

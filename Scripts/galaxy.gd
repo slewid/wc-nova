@@ -4,7 +4,7 @@ class_name Galaxy
 @export var particle_scene: PackedScene
 
 var amount_range: Array[int] = [50, 150]
-var distance_range: int = 4000
+var distance_range: int = 10000
 
 var my_stars = []
 var player: Player
