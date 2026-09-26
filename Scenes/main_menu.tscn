@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://d2a3a4n50qc43"]
 
 [ext_resource type="Theme" uid="uid://cr50j4i5te21i" path="res://Scenes/button.tres" id="1_28flt"]
+[ext_resource type="Script" uid="uid://brhneybjq5u31" path="res://Scripts/main_menu.gd" id="1_48xlc"]
 
 [node name="MainMenu" type="Control" unique_id=189686909]
 layout_mode = 3
@@ -9,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_48xlc")
 
 [node name="Start" type="Button" parent="." unique_id=191373690]
 layout_mode = 1
@@ -39,6 +41,8 @@ offset_right = 161.25
 offset_bottom = 49.75
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_28flt")
+text = "Settings"
 
 [node name="Quit" type="Button" parent="." unique_id=1713476983]
 layout_mode = 1
@@ -53,3 +57,5 @@ offset_right = 161.25
 offset_bottom = 169.75
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_28flt")
+text = "Quit"
