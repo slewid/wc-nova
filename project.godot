@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="nova!!!"
-run/main_scene="uid://c4tc0chhnrdsh"
+run/main_scene="uid://d2a3a4n50qc43"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
