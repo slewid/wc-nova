@@ -1,5 +1,5 @@
 extends Node
-@export var gravity = 3
+@export var gravity = 0
 @export var speed = 5
 @export var sprint_mult = 4
 @export var up_speed = 5
