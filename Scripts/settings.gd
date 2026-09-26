@@ -16,7 +16,7 @@ func _process(delta: float) -> void:
 		get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")
 	if $Default.button_pressed:
 		Globals.gravity = 0
-		Globals.speed = 5
+		Globals.speed = 7000
 		$Speed.value = Globals.speed
 		Globals.sprint_mult = 4
 		Globals.up_speed = 5

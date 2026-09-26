@@ -13,7 +13,7 @@ func _input(event):
 func _physics_process(delta):
 	var horizontal_input : Vector2 = Input.get_vector("left","right","forward","back")
 	var vertical_input : float = Input.get_axis("down","up")
-	var movement_dir = transform.basis * Vector3(horizontal_input.x, vertical_input, horizontal_input.y)
+	var movement_dir = (transform.basis * $Camera3D.transform.basis) * Vector3(horizontal_input.x, vertical_input, horizontal_input.y)
 	
 	var speed = Globals.speed * (Globals.sprint_mult if Input.is_action_pressed("boost") else 1)
 	velocity.x = movement_dir.x * speed * delta
