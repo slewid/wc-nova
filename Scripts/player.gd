@@ -26,7 +26,7 @@ func _physics_process(delta):
 	else:
 		velocity.x = movement_dir.x * Globals.speed
 		velocity.z = movement_dir.z * Globals.speed
-		if Input.is_action_just_pressed("up"):
+		if Input.is_action_pressed("up"):
 			velocity.y = Globals.up_speed  
 		if Input.is_action_just_pressed("down"):
 			velocity.y = Globals.down_speed  
