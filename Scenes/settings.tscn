@@ -1,5 +1,8 @@
 [gd_scene format=3 uid="uid://dnkbt8miqj874"]
 
+[ext_resource type="Script" uid="uid://nym4gibmtmi2" path="res://Scripts/settings.gd" id="1_4geyq"]
+[ext_resource type="Theme" uid="uid://cr50j4i5te21i" path="res://Scenes/button.tres" id="2_i44u3"]
+
 [node name="settings" type="Control" unique_id=35792961]
 layout_mode = 3
 anchors_preset = 15
@@ -7,3 +10,73 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_4geyq")
+
+[node name="Speed" type="HSlider" parent="." unique_id=1567896944]
+layout_mode = 0
+offset_left = 89.0
+offset_top = 52.0
+offset_right = 734.0
+offset_bottom = 336.0
+min_value = 1.0
+max_value = 10.0
+step = 0.01
+value = 1.0
+
+[node name="Label" type="Label" parent="Speed" unique_id=1845168492]
+layout_mode = 0
+offset_left = 202.0
+offset_top = 149.0
+offset_right = 397.0
+offset_bottom = 240.0
+theme = ExtResource("2_i44u3")
+text = "Speed"
+
+[node name="Main_Menu" type="Button" parent="." unique_id=711523677]
+layout_mode = 0
+offset_left = 1337.0
+offset_top = 66.0
+offset_right = 1840.0
+offset_bottom = 173.0
+theme = ExtResource("2_i44u3")
+text = "Main Menu"
+
+[node name="Quit" type="Button" parent="." unique_id=361084631]
+layout_mode = 0
+offset_left = 1334.0
+offset_top = 192.0
+offset_right = 1842.0
+offset_bottom = 287.0
+theme = ExtResource("2_i44u3")
+text = "Quit"
+
+[node name="Default" type="Button" parent="." unique_id=717546378]
+layout_mode = 0
+offset_left = 1331.0
+offset_top = 316.0
+offset_right = 1853.0
+offset_bottom = 414.0
+theme = ExtResource("2_i44u3")
+text = "Restore defaults"
+
+[node name="Mouse sensitivity" type="HSlider" parent="." unique_id=1395788749]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 239.0
+offset_right = 733.0
+offset_bottom = 523.0
+max_value = 1.0
+step = 0.01
+value = 1.0
+
+[node name="Label" type="Label" parent="Mouse sensitivity" unique_id=1298189961]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 160.0
+offset_right = 607.0
+offset_bottom = 251.0
+theme = ExtResource("2_i44u3")
+text = "Mouse Sensitivity"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_trim_flags = 0
