@@ -1,10 +1,6 @@
 [gd_scene format=3 uid="uid://d2a3a4n50qc43"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bhvhh"]
-corner_radius_top_left = 30
-corner_radius_top_right = 30
-corner_radius_bottom_right = 30
-corner_radius_bottom_left = 30
+[ext_resource type="Theme" uid="uid://cr50j4i5te21i" path="res://Scenes/button.tres" id="1_28flt"]
 
 [node name="MainMenu" type="Control" unique_id=189686909]
 layout_mode = 3
@@ -14,21 +10,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Button" type="Button" parent="." unique_id=1713476983]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -161.25
-offset_top = 70.25
-offset_right = 161.25
-offset_bottom = 169.75
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Button2" type="Button" parent="." unique_id=191373690]
+[node name="Start" type="Button" parent="." unique_id=191373690]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -41,11 +23,10 @@ offset_right = 161.25
 offset_bottom = -70.25
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 66
-theme_override_styles/normal = SubResource("StyleBoxFlat_bhvhh")
+theme = ExtResource("1_28flt")
 text = "Start"
 
-[node name="Button3" type="Button" parent="." unique_id=688808897]
+[node name="Settings" type="Button" parent="." unique_id=688808897]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -56,5 +37,19 @@ offset_left = -161.25
 offset_top = -49.75
 offset_right = 161.25
 offset_bottom = 49.75
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Quit" type="Button" parent="." unique_id=1713476983]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -161.25
+offset_top = 70.25
+offset_right = 161.25
+offset_bottom = 169.75
 grow_horizontal = 2
 grow_vertical = 2
