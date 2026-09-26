@@ -16,6 +16,15 @@ var particle_elements: Dictionary[GameElements, ParticleElement]
 var surface_material = null
 
 func _ready() -> void:
+	randomize()
+
+	var active_mat = get_active_material(0)
+	
+	if active_mat:
+		var unique_mat = active_mat.duplicate()
+
+		set_surface_override_material(0, unique_mat)
+
 	size = randf_range(0, 20)
 	density = randf_range(0, 1)
 	scale.x = size
