@@ -13,9 +13,9 @@ func _input(event):
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.pressed:
-		if event.button_index == MOUSE_BUTTON_WHEEL_UP:
+		if Input.is_action_just_pressed("zoom+"):
 			camera.global_position += -camera.global_transform.basis.z * Globals.zoom_constant
-		elif event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
+		elif Input.is_action_just_pressed("zoom-"):
 			camera.global_position += camera.global_transform.basis.z * Globals.zoom_constant
 
 func _physics_process(delta):
