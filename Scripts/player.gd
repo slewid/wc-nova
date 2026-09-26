@@ -16,8 +16,8 @@ func _physics_process(delta):
 	var movement_dir = transform.basis * Vector3(horizontal_input.x, vertical_input, horizontal_input.y)
 	
 	var speed = Globals.speed * (Globals.sprint_mult if Input.is_action_pressed("boost") else 1)
-	velocity.x = movement_dir.x * speed
-	velocity.y = movement_dir.y * speed
-	velocity.z = movement_dir.z * speed
+	velocity.x = movement_dir.x * speed * delta
+	velocity.y = movement_dir.y * speed* delta
+	velocity.z = movement_dir.z * speed* delta
 	
 	move_and_slide()
