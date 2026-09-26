@@ -1,5 +1,5 @@
 extends CharacterBody3D
-
+class_name Player
 
 func _input(event):
 	if event is InputEventMouseMotion:

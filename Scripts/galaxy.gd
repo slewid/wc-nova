@@ -3,8 +3,10 @@ class_name Galaxy
 
 @export var particle_scene: PackedScene
 
-var amount_range: Array[int] = [50, 200]
-var initial_distance: int = 1500
+var amount_range: Array[int] = [50, 150]
+var distance_range: int = 4000
+
+var my_stars = []
 
 func _ready():
 	randomize()
@@ -12,8 +14,9 @@ func _ready():
 	for x in range(randi_range(amount_range[0], amount_range[1])):
 		var instantiated = particle_scene.instantiate()
 
-		instantiated.position.x = randi_range(-initial_distance, initial_distance)
-		instantiated.position.y = randi_range(-initial_distance, initial_distance)
-		instantiated.position.z = randi_range(-initial_distance, initial_distance)
+		instantiated.position.x = randi_range(-distance_range, distance_range)
+		instantiated.position.y = randi_range(-distance_range, distance_range)
+		instantiated.position.z = randi_range(-distance_range, distance_range)
 
 		add_child(instantiated)
+		my_stars.append(instantiated)
