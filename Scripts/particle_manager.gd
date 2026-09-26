@@ -3,8 +3,8 @@ class_name ParticleManager
 
 @export var galaxy_scene: PackedScene
 
-var amount_range: Array[int] = [600, 1200]
-var start_range: int = 200000
+var amount_range: Array[int] = [200, 300]
+var start_range: int = 300000
 var start_distance: int = 20000
 
 func generate(player):

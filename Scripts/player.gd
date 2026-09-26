@@ -10,21 +10,21 @@ func _input(event):
 		camera.rotate_x(-event.relative.y * Globals.mouse_sensitivity)
 		rotate_y(-event.relative.x * Globals.mouse_sensitivity)
 		camera.rotation.x = clampf(camera.rotation.x, -deg_to_rad(70), deg_to_rad(70))
+		camera.rotation.y = max(camera.rotation.y, deg_to_rad(0))
 
-func _unhandled_input(event: InputEvent) -> void:
-	if event is InputEventMouseButton and event.pressed:
-		if Input.is_action_just_pressed("zoom+"):
-			camera.attributes.frustum_focal_length += Globals.zoom_constant
-		elif Input.is_action_just_pressed("zoom-"):
-			camera.attributes.frustum_focal_length -= Globals.zoom_constant
+func _process(delta):
+	if Input.is_action_just_pressed("zoom+"):
+			camera.attributes.frustum_focal_length = lerp(camera.attributes.frustum_focal_length, camera.attributes.frustum_focal_length + Globals.zoom_constant, Globals.zoom_constant * delta)
+	elif Input.is_action_just_pressed("zoom-"):
+		camera.attributes.frustum_focal_length = lerp(camera.attributes.frustum_focal_length, camera.attributes.frustum_focal_length - Globals.zoom_constant, Globals.zoom_constant * delta)
 
-			camera.attributes.frustum_focal_length = max(camera.attributes.frustum_focal_length, 35)
+		camera.attributes.frustum_focal_length = max(camera.attributes.frustum_focal_length, 80)
 
 func _physics_process(delta):
 	var horizontal_input : Vector2 = Input.get_vector("left","right","forward","back")
 	var vertical_input : float = Input.get_axis("down","up")
 	var movement_dir = (transform.basis * camera.transform.basis) * Vector3(horizontal_input.x, vertical_input, horizontal_input.y)
-	
+
 	var speed = Globals.speed * (Globals.sprint_mult if Input.is_action_pressed("boost") else 1)
 	velocity.x = movement_dir.x * speed * delta
 	velocity.y = movement_dir.y * speed * delta
