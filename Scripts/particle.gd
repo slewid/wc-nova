@@ -16,7 +16,7 @@ var particle_elements: Dictionary[GameElements, ParticleElement]
 var surface_material = null
 
 var density_range = [0, 1]
-var size_range = [8, 300]
+var size_range = [50, 400]
 
 func _ready() -> void:
 	randomize()

@@ -6,10 +6,11 @@
 [ext_resource type="PackedScene" uid="uid://cyfdqaccddbj4" path="res://Scenes/galaxy.tscn" id="4_p70al"]
 [ext_resource type="PackedScene" uid="uid://dovl8ljmjting" path="res://Scenes/player.tscn" id="5_p70al"]
 
-[node name="World" type="Node3D" unique_id=1314160547 node_paths=PackedStringArray("environment", "particle_manager")]
+[node name="World" type="Node3D" unique_id=1314160547 node_paths=PackedStringArray("environment", "particle_manager", "player")]
 script = ExtResource("1_5cjrv")
 environment = NodePath("WorldEnvironment")
 particle_manager = NodePath("ParticleManager")
+player = NodePath("CharacterBody3D")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1394004437]
 environment = ExtResource("2_gjpho")

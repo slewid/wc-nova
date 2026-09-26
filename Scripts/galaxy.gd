@@ -7,6 +7,7 @@ var amount_range: Array[int] = [50, 150]
 var distance_range: int = 4000
 
 var my_stars = []
+var player: Player
 
 func _ready():
 	randomize()
@@ -20,3 +21,6 @@ func _ready():
 
 		add_child(instantiated)
 		my_stars.append(instantiated)
+
+func _process(delta) -> void:
+	pass
