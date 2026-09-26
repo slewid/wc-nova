@@ -4,7 +4,7 @@ class_name Galaxy
 @export var particle_scene: PackedScene
 
 var amount_range: Array[int] = [50, 200]
-var initial_distance: int = 100
+var initial_distance: int = 1500
 
 func _ready():
 	randomize()
